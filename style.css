@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #161623;
+}
+section::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#f00,#f0f);
+    clip-path: circle(18% at 35% 69%);
+}
+section::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#2196f3,#e91e63);
+    clip-path: circle(15% at 65% 26%);
+
+}
+.contener{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+.contener .card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: rgba(255,255,255,0.05);
+    margin: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(255,255,255,0.4);
+    border-left: 1px solid rgba(255,255,255,0.4);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+.contener .card .contents{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contener .card .contents .imgBx{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgba(255,255,255,0.01);
+}
+.contener .card .contents .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contener .card .contents h3{
+    position: absolute;
+    top: -110px;
+    right: -30px;
+    font-size: 6em;
+    color: rgba(255,255,255,0.09);
+    pointer-events: none;
+}
+.contener .card .contents h2{
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 10px;
+    line-height: 1.1em;
+}
+.contener .card .contents h2 span{
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: initial;
+}
+.contener .card .icons{
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+}
+.contener .card .icons li{
+    list-style: none;
+    margin:  0 8px;
+    transform: translateY(25px);
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    opacity: 0;
+}
+.contener .card .icons li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+}
+.contener .card:hover .icons li{
+    transform: translateY(0px);
+    opacity: 1;
+}
